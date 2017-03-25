@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type"="text/css" href="logo_style.css" />
+	<script src="logo_script.js"></script>
+	
+	<title>Logo Board Game</title>
+
+	
+	</head>
+
+	<body>
+	<div id="wrapper">
+	
+		<script type="text/javascript">
+		startGame()
+		</script>
+
+		<!--red header to  put graphic in-->
+		<div id="header">
+			<h1>Welcome to the Logo Board Game!</h1>
+		</div>
+		
+		<!--purple bar-->
+		<div id="bar">						
+			<div id="bartext">
+			
+			<input type = "text" value="Load Saved Game"
+			onclick="saveGame();" class="bartextleft">
+				
+			&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+			
+			Number of players: 
+			<script type="text/javascript">
+			document.write(players())
+			</script>
+				
+			&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+				
+			<input type = "text" value="End Game"
+			onclick="endGame();" class="bartextright">	
+			</div>
+		</div>
+		
+		<!--prompts user to choose player colors and prints out results-->
+		<script type="text/javascript">
+			chooseColor()
+		</script><br>
+		
+		<!--basic functionality for making a thing move-->
+		<div id="myContainer">
+			<div id="p1" onclick="move()"></div>
+		</div><br>
+		
+
+		<!--play cards at the bottom-->
+		<div id="center">
+			<input type = "button" value="Theme Card" onclick = "themeCard();"
+				id="smallbutton" class="yellow">
+			
+			&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+			
+			<input type = "button" value="Picture Card" onclick = "pictureCard();"
+				id="smallbutton" class="purple">
+		
+			
+			&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+			
+			<input type = "button" value="Potluck Card" onclick = "potLuckCard();"
+				id="smallbutton" class="green">
+		</div>
+		
+		
+	</div>
+	</body>
+</html>
